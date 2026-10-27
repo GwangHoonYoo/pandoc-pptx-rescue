@@ -43,13 +43,15 @@ If Pandoc is outside `PATH`, add `--pandoc /absolute/path/to/pandoc`. The input 
 
 For this reference, the report has 20 entries in `restored_parts`, one entry in `reference_parts_normalized`, and an empty `missing_after` list. `changed_generated_parts` contains only `[Content_Types].xml`. `restored_parts_match_reference` is `true`.
 
+`missing_before` counts unresolved relationship references, including repeated references to the same part. `changed_generated_parts` compares against Pandoc's intermediate output after title-layout normalization, rather than the unmodified native baseline.
+
 Open `recovered.pptx` in the intended presentation application. In the tested LibreOffice rendering, the expected title, subtitle, heading and body are visible. Compare the native Pandoc baseline with the same input:
 
 ```sh
 pandoc examples/slides.md --reference-doc=reference.pptx --output=baseline.pptx
 ```
 
-That baseline omits 20 relationship targets and displays the subtitle and heading while losing the title and body in the tested consumer. The [evidence notes](docs/evidence.md) distinguish this visual recovery from metadata-only cases.
+That baseline has 20 unresolved internal references and displays the subtitle and heading while losing the title and body in the tested consumer. The [evidence notes](docs/evidence.md) distinguish this visual recovery from metadata-only cases.
 
 Use the same Pandoc 3.13 executable for both commands. If it is outside `PATH`, replace `pandoc` in the baseline command with that executable's path.
 

@@ -2,7 +2,7 @@
 
 The comparison was executed on 2026-10-27 with official Pandoc 3.13, Python 3.12.13 and official LibreOffice 26.8.1.1 on macOS Apple Silicon. Public source references are downloaded from the original authors; see [fixtures.json](fixtures.json) for exact URLs, sizes and hashes. They are not redistributed here.
 
-| Original source | Pandoc internal targets missing | Source parts restored by this CLI | Visual interpretation |
+| Original source | Unresolved internal references | Source parts restored by this CLI | Visual interpretation |
 |---|---:|---:|---|
 | [10085, LibreOffice reference](https://github.com/jgm/pandoc/issues/10085) | 20 | 20 | Title and body reappear after guarded title normalization plus dependency recovery |
 | [9003, corporate reference](https://github.com/jgm/pandoc/issues/9003) | 2 | 2 | Native LibreOffice already displays content; no exclusive visual benefit established |
@@ -10,6 +10,8 @@ The comparison was executed on 2026-10-27 with official Pandoc 3.13, Python 3.12
 | 9421, valid reference control | 0 | 0 | No title normalization or source restoration required |
 
 The added files differ by mechanism. The LibreOffice reference has additional slide masters. The corporate reference has revision-history parts. The Teams reference has custom XML and dependent property parts. The tool retrieves those existing parts from the supplied reference rather than inventing replacements.
+
+An unresolved-reference count is an edge count, not the number of distinct absent files. In the LibreOffice case, 20 references point to 10 absent masters; recovery also adds their 10 relationship files. The audit's generated-part comparison starts after the reference title normalization, so it is separate from the baseline-versus-recovered visual comparison.
 
 For the README's original 10085 reference and short included example, the native baseline PDF contains only `test` and `Test Slide`. The CLI output contains `Test Slide Deck`, `test`, `Test Slide` and `Test`, on two pages. Both rendered pages were visually inspected. The README image was composed from those actual PDFs.
 
