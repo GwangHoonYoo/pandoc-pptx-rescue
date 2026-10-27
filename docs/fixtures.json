@@ -1,0 +1,32 @@
+[
+  {
+    "name": "templateLOmac.pptx",
+    "url": "https://github.com/user-attachments/files/16603810/templateLOmac.pptx",
+    "bytes": 59965,
+    "sha256": "4ba4ac09a81247248d08c3ee63f908fac5e03cd7a6b662918a94d061f44e30d1"
+  },
+  {
+    "name": "custom-reference_original.2.pptx",
+    "url": "https://github.com/jgm/pandoc/files/12337722/custom-reference_original.2.pptx",
+    "bytes": 36682,
+    "sha256": "e7bbacb95122c0d678d4e31c208237789022e5655e0f5c159723f2fa49881350"
+  },
+  {
+    "name": "slides.md.txt",
+    "url": "https://github.com/jgm/pandoc/files/14186005/slides.md.txt",
+    "bytes": 80,
+    "sha256": "bc000d01fa7b4108ea1b627ae64dfeef618cdd0a1d8a4ab1b70bda4a805129ed"
+  },
+  {
+    "name": "uncorrupted-template.pptx",
+    "url": "https://github.com/jgm/pandoc/files/14185976/uncorrupted-template.pptx",
+    "bytes": 32439,
+    "sha256": "5b10debf251e0292f973a53dd24f0f129c12ebd47eae664cc7f9a35d76767883"
+  },
+  {
+    "name": "corrupted-after-teams-template.pptx",
+    "url": "https://github.com/jgm/pandoc/files/14185951/corrupted-after-teams-template.pptx",
+    "bytes": 37533,
+    "sha256": "d573df39825c1a761bdce0aaaa61cda9a76e4569fd46682dc73117e95ee7a0b6"
+  }
+]
