@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandoc-pptx-rescue"
+version = "0.1.0.dev0"
+description = "Recover source dependencies lost from Pandoc PowerPoint reference templates"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
